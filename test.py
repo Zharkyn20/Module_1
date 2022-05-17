@@ -1,9 +1,9 @@
 import os
 
 while True:
-    value = input('>>> ').split()
-    if value[0].upper() == 'EXIT':
+    value = input('>>> ')
+    if value == 'EXIT':
         break
 
-    os.system('{} {}'.format(value[0], value[1]))
+    os.system(value)
 

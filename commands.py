@@ -2,6 +2,14 @@ import shutil
 import os
 
 
+def check_args(args):
+    if len(args) > 0:
+        return True
+    else:
+        print('Here is no arguments!')
+        return None
+
+
 def init(_):
     """
     Initializes 'zeon_fs' directory

@@ -5,9 +5,8 @@ from commands import *
 _, command, *args = sys.argv
 
 args = ''.join(args)
-
-if command in commands:
+if command in commands_dict.keys():
     check_args(args)
-    commands[command](args)
+    commands_dict[command](args)
 else:
-    commands['get_file'](args)
+    help_me()

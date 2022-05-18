@@ -36,7 +36,7 @@ def add_file(path):
     """
     Copy file from given path to the 'zeon_fs' directory
     """
-    source = '{}'.format(path)
+    source = f'{path}'
     destination = '.'
     shutil.copy(source, destination)
 
@@ -45,7 +45,7 @@ def delete_file(file_name):
     """
     Delete file from 'zeon_fs' directory
     """
-    os.remove('./{}'.format(file_name))
+    os.remove(f'./{file_name}')
 
 
 def get_file_content(file_name, get_file_path):
@@ -55,7 +55,7 @@ def get_file_content(file_name, get_file_path):
     that given in the path as argument
     """
     content = open(get_file_path, 'r')
-    zeon_fs_file = open('./{}'.format(file_name), 'x')
+    zeon_fs_file = open(f'./{file_name}', 'x')
     zeon_fs_file.write(content.read())
     zeon_fs_file.close()
     content.close()
